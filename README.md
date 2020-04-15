@@ -4,7 +4,7 @@ Simple and lightweight material design input component with no dependencies.
 
 ## Showcase
 
-![Showcase](https://github.com/mehmetkarakamis/vue-material-input-box/blob/master/screenshots/vue-material-input-box?raw=true)
+![Showcase](https://raw.githubusercontent.com/mehmetkarakamis/vue-material-input-box/master/screenshots/vue-material-input-box.gif)
 
 ## Installation
 
