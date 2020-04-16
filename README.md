@@ -9,7 +9,7 @@ Simple and lightweight material design input component with no dependencies.
 ## Installation
 
 ```bash
-npm i vue-material-input-box
+npm i vue-material-input-box --save
 ```
 
 ## Usage
@@ -47,6 +47,11 @@ Example:
 			<td>"off"</td>
 		</tr>
 		<tr>
+			<td>background-color</td>
+			<td>String</td>
+			<td>"#FAFAFA"</td>
+		</tr>
+		<tr>
 			<td>color</td>
 			<td>String</td>
 			<td>"#2196F3"</td>
@@ -59,7 +64,7 @@ Example:
 		<tr>
 			<td>label</td>
 			<td>String</td>
-			<td>""</td>
+			<td>null</td>
 		</tr>
 		<tr>
 			<td>placeholder</td>

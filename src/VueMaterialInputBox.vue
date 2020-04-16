@@ -4,13 +4,13 @@
 			class="input"
 			:autocomplete="autocomplete"
 			@focus="push_from_bottom = true"
-			@blur="checkInput"
+			@blur="onBlur"
 			:disabled="disabled"
 			@input="handleInput"
 			:placeholder="placeholder"
 			:required="required"
+			:style="{ 'background-color': backgroundColor }"
 			:type="type"
-			:value="input_value"
 		>
 		<div
 			class="bar"
@@ -32,6 +32,10 @@
 				default: "off",
 				type: String
 			},
+			backgroundColor: {
+				default: "#FAFAFA",
+				type: String
+			},
 			color: {
 				default: "#2196F3",
 				type: String
@@ -41,7 +45,7 @@
 				type: Boolean
 			},
 			label: {
-				default: "",
+				default: null,
 				type: String
 			},
 			placeholder: {
@@ -67,12 +71,12 @@
 			if(this.placeholder) this.push_from_bottom = true;
 		},
 		methods: {
-			checkInput() {
-				if(!this.input_value) this.push_from_bottom = false;
-			},
 			handleInput(event) {
 				this.input_value = event.target.value;
 				this.$emit("input", this.input_value);
+			},
+			onBlur() {
+				if(!this.input_value && !this.placeholder) this.push_from_bottom = false;
 			}
 		}
 	}
